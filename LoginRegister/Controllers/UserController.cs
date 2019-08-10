@@ -63,7 +63,7 @@ namespace LoginRegister.Controllers
                     TempData["UserEmailFailed"] = "The email you’ve entered doesn’t match any account";
                 }
             }
-            return View();            
+            return View();
         }
 
         private decimal GetBalance()

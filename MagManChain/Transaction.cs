@@ -19,7 +19,7 @@ namespace MagMan
             Amount = amount;
         }
 
-        
+
         public Transaction()
         {
 

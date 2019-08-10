@@ -1,5 +1,5 @@
-using Newtonsoft.Json;
 using System;
+using Newtonsoft.Json;
 
 namespace MagMan
 {
@@ -16,9 +16,14 @@ namespace MagMan
             MagMan.InitializeChain();
 
             if (args.Length >= 1)
+            {
                 Port = int.Parse(args[0]);
+            }
+
             if (args.Length >= 2)
+            {
                 name = args[1];
+            }
 
             if (Port > 0)
             {

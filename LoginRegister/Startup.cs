@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Authentication.Cookies;
+﻿using System;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
 
 namespace LoginRegister
 {
@@ -23,7 +23,7 @@ namespace LoginRegister
                     .AddCookie(options =>
                     {
                         options.LoginPath = "/Login/UserLogin/";
-                        options.ExpireTimeSpan = TimeSpan.FromMinutes(10); 
+                        options.ExpireTimeSpan = TimeSpan.FromMinutes(10);
                     });
             services.AddMvc();
         }

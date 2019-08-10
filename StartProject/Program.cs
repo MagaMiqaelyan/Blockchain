@@ -1,11 +1,10 @@
-﻿using System;
-using MagMan;
+﻿using MagMan;
 
 namespace StartProject
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             StartProgram startProgram = new StartProgram();
             startProgram.Start(args);

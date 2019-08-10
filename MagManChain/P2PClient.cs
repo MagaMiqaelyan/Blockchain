@@ -10,7 +10,7 @@ namespace MagMan
     /// </summary>
     public class P2PClient
     {
-        IDictionary<string, WebSocket> wsDict = new Dictionary<string, WebSocket>();
+        private IDictionary<string, WebSocket> wsDict = new Dictionary<string, WebSocket>();
 
         public void Connect(string url)
         {

@@ -12,9 +12,9 @@ namespace MagMan
     /// </summary>
     public class P2PServer : WebSocketBehavior
     {
-        bool chainSynched = false;
-        WebSocketServer webSocketServer = null;
-        P2PClient Client = new P2PClient();
+        private bool chainSynched = false;
+        private WebSocketServer webSocketServer = null;
+        private readonly P2PClient Client = new P2PClient();
 
         public void Start()
         {
@@ -32,11 +32,11 @@ namespace MagMan
                 Send("Hi Client");
             }
             else if (JsonConvert.DeserializeObject(e.Data).ToString().Contains("Type"))
-            {               
+            {
                 var fromAddress = "";
                 var jObject = JObject.Parse(e.Data);
-                
-                if((string)jObject["FromAddress"] == string.Empty)
+
+                if ((string)jObject["FromAddress"] == string.Empty)
                 {
                     var leader = new Leader();
                     fromAddress = leader.LeaderAddress;
